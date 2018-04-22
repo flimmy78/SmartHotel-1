@@ -155,7 +155,7 @@
                         </Image.Source>
                     </Image>
 
-                    <!--<carousel:CarouselViewControl x:Name="Carousel"
+                    <carousel:CarouselViewControl x:Name="Carousel"
                                                   Orientation="Horizontal"
                                                   InterPageSpacing="0"
                                                   ShowIndicators="True"
@@ -164,10 +164,10 @@
                                                   ItemsSource="{Binding Notifications, Mode=OneWay}">
                         <carousel:CarouselViewControl.ItemTemplate>
                             <DataTemplate>
-                                <templates:NotificationItemTemplate TapCommand="{Binding BindingContext.NotificationCommand, Source={x:Reference Self}}" />
+                                <templates:MenuItemTemplate TapCommand="{Binding BindingContext.NotificationCommand, Source={x:Reference Self}}" />
                             </DataTemplate>
                         </carousel:CarouselViewControl.ItemTemplate>
-                    </carousel:CarouselViewControl>-->
+                    </carousel:CarouselViewControl>
 
                     <Image Margin="0,30,0,12"
                            VerticalOptions="Start"
