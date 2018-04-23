@@ -41,20 +41,29 @@ namespace SmartHotel.Services.Navigation
             var page = (Page)Activator.CreateInstance(pageType);
 
             var viewModel =
-                page.BindingContext = 
+                page.BindingContext =
                     ServiceLocator.Instance.Resolve(viewModelType);
-           
+
             if (page is LoginView)
             {
-                Application.Current.MainPage = new NavigationPage(page);                
+                Application.Current.MainPage = new NavigationPage(page);
             }
             else if (page is MainView)
             {
                 Application.Current.MainPage = page;
             }
+            else if (Application.Current.MainPage is MainView mainView)
+            {
+                if (mainView.Detail is NavigationPage navigationPage)
+                {
+                    await navigationPage.PushAsync(page);
+                }
+                //
+                mainView.IsPresented = false;
+            }
 
-            await ((ViewModelBase) viewModel).InitializeAsync(parameter);
-            
+            await ((ViewModelBase)viewModel).InitializeAsync(parameter);
+
             // return Task.CompletedTask;
         }
 

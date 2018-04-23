@@ -26,6 +26,9 @@ namespace SmartHotel
             RegisterInstance<INavigationService, NavigationService>();
 
 
+            _containerBuilder.RegisterType<SuggesstionsViewModel>();
+            _containerBuilder.RegisterType<MyRoomViewModel>();
+            _containerBuilder.RegisterType<BookingViewModel>();
             _containerBuilder.RegisterType<HomeViewModel>();
             _containerBuilder.RegisterType<MainViewModel>();
             _containerBuilder.RegisterType<LoginViewModel>();
@@ -36,10 +39,10 @@ namespace SmartHotel
             _containerBuilder.RegisterType<U>().As<T>();
         }
 
-       public void RegisterInstance<T, U>() where U : T
-       {
-           _containerBuilder.RegisterType<U>().As<T>().SingleInstance();
-       }
+        public void RegisterInstance<T, U>() where U : T
+        {
+            _containerBuilder.RegisterType<U>().As<T>().SingleInstance();
+        }
 
 
 

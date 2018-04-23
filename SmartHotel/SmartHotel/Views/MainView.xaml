@@ -5,7 +5,8 @@
                   x:Class="SmartHotel.Views.MainView"
                   MasterBehavior="Popover">
     <MasterDetailPage.Master>
-        <local:MenuView Title="Menu" />
+        <local:MenuView Title="Menu"
+                        BindingContext="{Binding MenuViewModel}"/>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage>

@@ -15,8 +15,6 @@ namespace SmartHotel.Views
         public MenuView()
         {
             InitializeComponent();
-
-            BindingContext = new MenuViewModel();
         }
 
         private void OnBookingMenuTapped(object sender, EventArgs args)

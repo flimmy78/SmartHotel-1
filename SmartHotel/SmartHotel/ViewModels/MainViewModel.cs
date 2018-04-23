@@ -7,7 +7,12 @@ namespace SmartHotel.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        public MenuViewModel MenuViewModel { get; }
 
+        public MainViewModel()
+        {
+            MenuViewModel = new MenuViewModel();
+        }
 
     }
 }
