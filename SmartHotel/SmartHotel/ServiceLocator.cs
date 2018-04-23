@@ -25,7 +25,7 @@ namespace SmartHotel
 
             RegisterInstance<INavigationService, NavigationService>();
 
-
+            _containerBuilder.RegisterType<ConciergeViewModel>();
             _containerBuilder.RegisterType<SuggesstionsViewModel>();
             _containerBuilder.RegisterType<MyRoomViewModel>();
             _containerBuilder.RegisterType<BookingViewModel>();

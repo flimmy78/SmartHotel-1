@@ -25,7 +25,7 @@ namespace SmartHotel.ViewModels
                 new MenuItem(){ Icon = "ic_bed", Title ="Book a room", ViewModelType = typeof(BookingViewModel) },
                 new MenuItem(){ Icon = "ic_key", Title ="My room", ViewModelType = typeof(MyRoomViewModel) },
                 new MenuItem(){ Icon = "ic_beach", Title ="Suggestions", ViewModelType = typeof(SuggesstionsViewModel) },
-                new MenuItem(){ Icon = "ic_bot", Title ="Concierge" },
+                new MenuItem(){ Icon = "ic_bot", Title ="Concierge", ViewModelType=typeof(ConciergeViewModel) },
                 new MenuItem(){ Icon = "ic_logout", Title ="Logout" },
             };
 
