@@ -30,6 +30,8 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
 
+            <controls:Calendar />
+
             <controls:MyEntryView Grid.Row="1"
                                   Text="{Binding Username}"
                                   LabelText="Username"
