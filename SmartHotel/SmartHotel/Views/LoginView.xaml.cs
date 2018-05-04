@@ -9,14 +9,14 @@ using Xamarin.Forms.Xaml;
 
 namespace SmartHotel.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginView : ContentPage
-	{
-        public LoginView ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class LoginView : ContentPage
+    {
+        public LoginView()
+        {
+            InitializeComponent();
 
-		    NavigationPage.SetHasNavigationBar(this, false);
-		}        
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Threading.Tasks;
+
 using SmartHotel.Mvvm.Commands;
 using SmartHotel.Services;
+using SmartHotel.Services.Authentication;
 using SmartHotel.ViewModels.Base;
 
 namespace SmartHotel.ViewModels
@@ -9,6 +11,9 @@ namespace SmartHotel.ViewModels
     public class LoginViewModel : ViewModelBase
     {
         private string _username;
+
+        private readonly IAuthenticationService _authenticationService;
+
         public string Username
         {
             get => _username;
@@ -35,16 +40,22 @@ namespace SmartHotel.ViewModels
 
         private bool CanLogin()
         {
-            return !string.IsNullOrEmpty(Username)
-                   && !string.IsNullOrEmpty(Password);
+            return !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password);
         }
 
-        private void Login()
+        private async void Login()
         {
-            if (Username == "abc" && Password == "12345")
-            {
-                NavigationService.NavigateToAsync<MainViewModel>();
-            }
+            //IsBusy = true;
+            //if (await _authenticationService.LoginAsync(Username, Password))
+            //{
+            //    IsBusy = false;
+            //    await NavigationService.NavigateToAsync<MainViewModel>();
+            //}
+            //IsBusy = false;
+            ////
+
+            await NavigationService.NavigateToAsync<MainViewModel>();
+            //
         }
 
         public override Task InitializeAsync(object navigationData)

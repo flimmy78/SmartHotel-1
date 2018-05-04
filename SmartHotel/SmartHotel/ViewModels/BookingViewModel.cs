@@ -7,5 +7,6 @@ namespace SmartHotel.ViewModels
 {
     public class BookingViewModel : ViewModelBase
     {
+
     }
 }
